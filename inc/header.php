@@ -22,7 +22,7 @@ $user = new User();
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Registration</a></li>
             <?php else: ?>
-                <li><a href="">My orders</a></li>
+                <li><a href="orders.php">My orders</a></li>
                 <li><a href="logout.php">Logout</a></li>
                 <li style="float:right"><a class="active" href="cart.php">Cart</a></li>   
             <?php endif;?>
