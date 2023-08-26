@@ -12,7 +12,7 @@ if(!$user -> is_logged()){
 
 $cart = new Cart();
 $cart_items = $cart -> get_cart_items();
-var_dump($cart);
+
 
 ?>
 
@@ -22,6 +22,7 @@ var_dump($cart);
             <th scope="col">Product name</th>
             <th scope="col">Size</th>
             <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
             <th scope="col">Image</th>
         </tr>
     </thead>
@@ -30,8 +31,9 @@ var_dump($cart);
             <tr>
             <td><?php echo $item['name']; ?></td>
             <td><?php echo $item['size']; ?></td>
-            <td><?php echo $item['price']; ?></td>
-            <td><img src="<?php echo $item['image']; ?>" height="50" alt=""></td>
+            <td>$<?php echo $item['price']; ?></td>
+            <td><?php echo $item['quantity']; ?></td>
+            <td><img src="<?php echo $item['image'];?>" height="50"></td>
             </tr>
             <?php endforeach; ?>
     </tbody>
