@@ -4,7 +4,14 @@
 
 
 
+
 <?php
+    if($user->is_logged()){
+        header('location: index.php');
+        exit();
+    }
+
+
  if($_SERVER['REQUEST_METHOD'] == "POST"){  //dali je poslan zahtjev
     $username = $_POST['username'];
     $password = $_POST['password'];

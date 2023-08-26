@@ -17,8 +17,14 @@ $user = new User();
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="#news">About us</a></li>
+            <?php
+            if(!$user->is_logged()): ?>
             <li><a href="login.php">Login</a></li>
             <li><a href="register.php">Registration</a></li>
+            <?php else: ?>
+            <li><a href="">My orders</a></li>
+            <li><a href="logout.php">Logout</a></li>   
+            <?php endif;?>
             <li style="float:right"><a class="active" href="#about">Shop</a></li>
         </ul>
       </nav>
