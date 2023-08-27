@@ -20,10 +20,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){  //dali je poslan zahtjev
 <link rel="stylesheet" href="public/css/style.css">
 
 <div class = "row">
-            <div class = "col-lg-6">
-                <img src="public/product_images/1.png<?php echo $product['image']; ?>" class="img-fluid">
+            <div class = "col-lg-3">
+                <img src="public/product_images/<?php echo $product['image']; ?>" class="img-fluid">
             </div>
-                <div class = "col-lg-6">
+                <div class = "col-lg-3">
                     <div class = "card-body">
                         <h2><?php echo $product['name']; ?></h2>
                         <p >Size: <?php echo $product['size']?></p>

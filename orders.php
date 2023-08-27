@@ -35,7 +35,7 @@ $orders = $order-> get_orders();
             <td><?php echo $order['quantity']?></td>
             <td><?php echo $order['price']?></td>
             <td><?php echo $order['size']?></td>
-            <td><img src="<?php echo $order['image'];?>" height="50"></td>
+            <td><img src="public/product_images/<?php echo $order['image'];?>" height="50"></td>
             <td><?php echo $order['delivery_address']?></td>
             <td><?php echo $order['created_at']?></td>
         </tr>
