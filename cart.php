@@ -33,7 +33,7 @@ $cart_items = $cart -> get_cart_items();
             <td><?php echo $item['size']; ?></td>
             <td>$<?php echo $item['price']; ?></td>
             <td><?php echo $item['quantity']; ?></td>
-            <td><img src="<?php echo $item['image'];?>" height="50"></td>
+            <td><img src="public/product_images/<?php echo $item['image'];?>" height="50"></td>
             </tr>
             <?php endforeach; ?>
     </tbody>

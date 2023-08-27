@@ -1,15 +1,15 @@
 
 <?php require_once 'inc/header.php';
-    require_once 'app/classes/product.php';
+    require_once 'app/classes/Product.php';
 
     $products = new product();
     $products = $products -> fetch_all();
 ?>
     <div class = "row">
          <?php foreach($products as $product): ?>
-            <div class = "col-md-4">
+            <div class = "col-md-3">
                 <div class = "card">
-                <img src="public/product_images/1.png<?php echo $product['image'] ?>" class="card-img-top" alt="<?=$product['name'] ?>">
+                <img src="public/product_images/<?php echo $product['image'] ?>" class="card-img-top" alt="<?=$product['name'] ?>">
                     <div class = "card-body">
                     <h5 class = "card-title"><?php echo $product['name']?></h5>
                     <p class = "card-text">Size: <?php echo $product['size']?></p>

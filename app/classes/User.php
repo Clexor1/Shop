@@ -50,6 +50,20 @@ class User{
         }
         return false;
     }
+    public function is_admin(){
+        $sql = "SELECT * FROM users WHERE user_id = ? AND is_admin = 1";
+        $sql = $this-> conn -> prepare($sql);
+        $sql -> bind_param("i",$_SESSION['user_id']);
+        $sql ->execute();  //izvrsi
+
+        $results = $sql -> get_result();
+        if($results -> num_rows > 0){
+            return true;
+        }
+        return false;
+
+
+    }
     public function logout(){
         unset($_SESSION['user_id']);
     }
